@@ -1,0 +1,120 @@
+body{
+    margin: 0;
+    padding-top: 32px;
+    background-color: black; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.calculator{
+    box-shadow: 1px 1px 10px rgb(70, 69, 69);
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 40px;
+    border-radius: 40px;
+    width: 350px;
+    height: 608px;
+}
+.recordDiv{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    padding-left: 12px;
+    height: 18px;
+
+}
+.answerDiv{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 70px;
+    font-weight: 500;
+    text-align: right;
+    /* padding-right: 10px; */
+    overflow:scroll;
+    transform: translateY(20px);
+    height: 88px;
+}
+::-webkit-scrollbar{
+    background-color: black;
+    height: 8px;
+}
+::-webkit-scrollbar-corner{
+    background-color: black;
+} 
+::-webkit-scrollbar-thumb{
+    background-color: rgba(70, 69, 69, 0.233);
+    border-radius: 50px;
+}
+
+.keys{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    padding-top: 30px;
+}
+
+.key{
+    cursor: pointer;
+    height: 80px;
+    width: 80px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+.key:hover{
+    transform: scale(1.02);
+}
+#zero{
+    width: auto;
+   grid-row-start:5 ;
+   grid-row-end:6 ;
+   grid-column-start: 1;
+   grid-column-end: 3; 
+   border-radius: 40px;
+}
+/* .backspace-key{
+    letter-spacing: -5px;
+} */
+.greyKey{
+    background-color: lightgray;
+    transition: all 0.10s;
+}
+.yellowKey{
+    background-color: #fec20c;
+    color: white;
+    transition: all 0.15s;
+}
+.numbers-key{
+    background-color: rgb(70, 69, 69);
+    color: white;
+    transition: all 0.10s ease-in;
+}
+.blink{
+    background-color: rgb(247, 245, 245);
+}
+.click{
+    background-color: rgb(247, 245, 245);
+    color: #fec20c;
+}
+.blink#equalsSign{
+    color: #fec20c;
+}
+footer{
+    color: lightgray;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 32px;
+    text-align: center;
+    font-size: 25px;
+
+}
