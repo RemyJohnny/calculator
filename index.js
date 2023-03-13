@@ -270,6 +270,11 @@ percentbtn.addEventListener('transitionend',function (){
 })
 //event AC button to wipe every stored data
 ACbtn.addEventListener('click', function () {
+  const op = document.querySelectorAll('.click')
+    // loop to remove click class that causes the operator button to white bg
+    op.forEach(ops => {
+      ops.classList.remove('click');
+    })
   ACbtn.classList.add('blink');
   num1 = '';
   num2 = '';
@@ -284,6 +289,11 @@ ACbtn.addEventListener('transitionend',function (){
 })
 //event CE button to delete previous input accordinly
 backspace.addEventListener('click', function () {
+  const op = document.querySelectorAll('.click')
+    // loop to remove click class that causes the operator button to white bg
+    op.forEach(ops => {
+      ops.classList.remove('click');
+    })
   backspace.classList.add('blink');
   if (num1 !== ''&& operator === '' && num2 === ''){
    let answerString = num1.toString();
