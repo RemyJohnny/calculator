@@ -167,23 +167,33 @@ keys.forEach( key => {
         if (num1 ===''){
           return;
         }
-        if (num1 !== '' && operator !== '' && num2 === ''){
-          return         
-        }
+
+
         //for multiple operation
       if (num1 !== '' && operator !== '' && num2 !== ''){
         let answer = operate(num1,operator,num2)
-        roundAns = Math.round(answer * 100)/100
+        roundAns = Math.round(answer * 100)/100; 
         answerDiv.textContent = checkInfinity(roundAns);
-        console.log(roundAns);
         num1 = roundAns;
+        operator = key.textContent;
+        recorddiv.textContent += ` ${operator} `;
         num2 = '';
         
       }
-        operator = key.textContent;;
+      else if (num1 !== ''){
+        operator = key.textContent;
       //answerDiv.textContent = "";
       recorddiv.textContent += ` ${operator} `;
       console.log(operator)
+      }       
+      else if (num1 !== '' && operator !== '' && previousNum2 !== ''){
+        operator = key.textContent;
+        recorddiv.textContent = `${roundAns} ${operator} `;
+        console.log(operator)
+      }
+      else if (num1 !== '' && operator !== '' && num2 === ''){
+        return         
+      }
 
       
      
